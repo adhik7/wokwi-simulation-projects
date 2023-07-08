@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "author": "A k",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-mega", "id": "mega", "top": 4.14, "left": -46.91, "attrs": {} },
+    {
+      "type": "wokwi-7segment",
+      "id": "sevseg1",
+      "top": 274.08,
+      "left": 65.05,
+      "attrs": { "digits": "4" }
+    },
+    {
+      "type": "wokwi-membrane-keypad",
+      "id": "keypad1",
+      "top": -346.79,
+      "left": 77.18,
+      "attrs": {
+        "keys": [ "1", "2", "3", "+", "4", "5", "6", "-", "7", "8", "9", "*", "<-", "0", "=", "/" ]
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -68.29,
+      "left": 25.09,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": -107.6,
+      "left": 19.59,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": -89.4,
+      "left": 22.19,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r4",
+      "top": -49.09,
+      "left": 23.49,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "sevseg1:A", "mega:A8", "green", [ "v-59.74", "h101.25" ] ],
+    [ "sevseg1:B", "mega:A9", "green", [ "v-54.22", "h72.51" ] ],
+    [ "sevseg1:C", "mega:A10", "green", [ "v30.89", "h127.58", "v-153.15", "h-27.59" ] ],
+    [ "sevseg1:E", "mega:A12", "green", [ "v55.72", "h168.8", "v-186.26", "h-27.59" ] ],
+    [ "mega:A11", "sevseg1:D", "green", [ "v26.72", "h20.69", "v171.09", "h-144.87" ] ],
+    [ "sevseg1:F", "mega:A13", "green", [ "v-30.76", "h150.98" ] ],
+    [ "sevseg1:G", "mega:A14", "green", [ "v22.61", "h138.68", "v-157.29", "h-11.04" ] ],
+    [ "mega:GND.2", "sevseg1:COM", "black", [ "v77.77", "h-73", "v91.06", "h137.97" ] ],
+    [ "sevseg1:DIG1", "mega:A0", "blue", [ "v-76.3", "h28.07" ] ],
+    [ "sevseg1:DIG2", "mega:A1", "blue", [ "v-61.12", "h0.65" ] ],
+    [ "sevseg1:DIG3", "mega:A2", "blue", [ "v-81.81", "h7.6" ] ],
+    [ "sevseg1:DIG4", "mega:A3", "blue", [ "v12.95", "h79.41", "v-103.48", "h-71.75" ] ],
+    [ "keypad1:R1", "mega:22", "orange", [ "v38.17", "h7.17", "v-33.46" ] ],
+    [ "keypad1:R2", "mega:23", "orange", [ "v0" ] ],
+    [ "keypad1:R3", "mega:24", "orange", [ "v0" ] ],
+    [ "keypad1:R4", "mega:25", "orange", [ "v0" ] ],
+    [ "keypad1:C1", "mega:26", "orange", [ "v0" ] ],
+    [ "keypad1:C2", "mega:27", "orange", [ "v0" ] ],
+    [ "keypad1:C3", "mega:28", "orange", [ "v0" ] ],
+    [ "keypad1:C4", "mega:29", "orange", [ "v62.05", "h-30.64" ] ],
+    [ "keypad1:C1", "r2:2", "black", [ "v0" ] ],
+    [ "keypad1:C2", "r3:2", "black", [ "v0" ] ],
+    [ "keypad1:C3", "r1:2", "black", [ "v0" ] ],
+    [ "keypad1:C4", "r4:2", "black", [ "v0" ] ],
+    [ "mega:GND.1", "r4:1", "black", [ "v-24.96", "h-47.69", "v-26.01" ] ],
+    [ "mega:GND.1", "r1:1", "black", [ "v-34.06", "h-65.89" ] ],
+    [ "mega:GND.1", "r3:1", "black", [ "v-43.16", "h-48.99" ] ],
+    [ "mega:GND.1", "r2:1", "black", [ "v-69.17", "h-61.99" ] ]
+  ],
+  "dependencies": {}
+}
