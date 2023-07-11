@@ -129,7 +129,7 @@ void print_in_lcd (char *str){
   }
   return 0;
 }
-long long int calc( int num1,  int num2 ,char chars){
+long long int calc(long long int num1,long long int num2 ,char chars){
   long long int res;
            if(chars=='+'){
              res=num1+num2;
